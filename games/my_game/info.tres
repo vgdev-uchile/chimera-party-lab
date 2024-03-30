@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GameInfo" load_steps=3 format=3 uid="uid://of0x7cwcpc8o"]
+
+[ext_resource type="Texture2D" uid="uid://bcbnjudxibp0o" path="res://chimerin/assets/chimerin.png" id="1_1b8nj"]
+[ext_resource type="Script" path="res://scripts/game_info.gd" id="2_a74hl"]
+
+[resource]
+script = ExtResource("2_a74hl")
+name = "My Game"
+description = "This is the [shake level=20]description[/shake] of my game"
+image = ExtResource("1_1b8nj")
