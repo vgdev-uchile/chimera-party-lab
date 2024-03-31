@@ -11,7 +11,6 @@ enum Inputs {
 }
 
 class PlayerData:
-	var name: String
 	var input: int
 	var primary_color: Color
 	var secondary_color: Color
