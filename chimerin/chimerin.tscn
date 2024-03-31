@@ -644,15 +644,3 @@ anim_player = NodePath("../AnimationPlayer")
 "parameters/BlendSpace2D 2/blend_position" = Vector2(0, 0)
 parameters/idle/blend_position = Vector2(-0.107547, -0.0621119)
 parameters/walk/blend_position = Vector2(-0.756604, 0.552795)
-
-[node name="Label" type="Label" parent="."]
-offset_left = -350.0
-offset_top = 14.0
-offset_right = 350.0
-offset_bottom = 59.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 32
-text = "name"
-horizontal_alignment = 1
-clip_text = true

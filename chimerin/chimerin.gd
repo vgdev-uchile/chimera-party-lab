@@ -52,7 +52,6 @@ func setup(player_data: Statics.PlayerData) -> void:
 	data = player_data
 	input = player_data.input
 	change_color(player_data.primary_color)
-	label.text = player_data.name
 
 
 func change_color(color: Color):
