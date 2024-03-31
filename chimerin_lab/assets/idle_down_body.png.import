@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjaq7cetskd64"
-path="res://.godot/imported/attack_left_eye.png-c4eaee331e37b304f5e3541c5f182a9e.ctex"
+uid="uid://bfnw8alh0373h"
+path="res://.godot/imported/idle_down_body.png-7bcc2b657282814ac5775e81cccb2fc1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://chimerin/assets/attack_left_eye.png"
-dest_files=["res://.godot/imported/attack_left_eye.png-c4eaee331e37b304f5e3541c5f182a9e.ctex"]
+source_file="res://chimerin_lab/assets/idle_down_body.png"
+dest_files=["res://.godot/imported/idle_down_body.png-7bcc2b657282814ac5775e81cccb2fc1.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcbnjudxibp0o"
-path="res://.godot/imported/chimerin.png-89cb99b2165287c1328407ce167283dc.ctex"
+uid="uid://banri3nyemw07"
+path="res://.godot/imported/attack_left_body.png-c069d720647fd6d329f932f1336331bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://chimerin/assets/chimerin.png"
-dest_files=["res://.godot/imported/chimerin.png-89cb99b2165287c1328407ce167283dc.ctex"]
+source_file="res://chimerin_lab/assets/attack_left_body.png"
+dest_files=["res://.godot/imported/attack_left_body.png-c069d720647fd6d329f932f1336331bf.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3fuu111aqbxd"
-path="res://.godot/imported/idle_right_eye.png-fa82c721c53890767009f4d02d38056c.ctex"
+uid="uid://d0r2a6vmxv3m7"
+path="res://.godot/imported/idle_left_eye.png-2fc75ee63b187b2755605d4cb22f0c83.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://chimerin/assets/idle_right_eye.png"
-dest_files=["res://.godot/imported/idle_right_eye.png-fa82c721c53890767009f4d02d38056c.ctex"]
+source_file="res://chimerin_lab/assets/idle_left_eye.png"
+dest_files=["res://.godot/imported/idle_left_eye.png-2fc75ee63b187b2755605d4cb22f0c83.ctex"]
 
 [params]
 

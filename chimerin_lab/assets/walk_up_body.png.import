@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ditwkwlqn2qkk"
-path="res://.godot/imported/walk_up_body.png-3a64ad3e8a622a31b6ac63d37fa8b190.ctex"
+path="res://.godot/imported/walk_up_body.png-cf3129ff3be8e9fb4629f8ccfef04907.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://chimerin/assets/walk_up_body.png"
-dest_files=["res://.godot/imported/walk_up_body.png-3a64ad3e8a622a31b6ac63d37fa8b190.ctex"]
+source_file="res://chimerin_lab/assets/walk_up_body.png"
+dest_files=["res://.godot/imported/walk_up_body.png-cf3129ff3be8e9fb4629f8ccfef04907.ctex"]
 
 [params]
 

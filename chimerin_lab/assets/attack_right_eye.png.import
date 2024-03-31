@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dolntf1bnfca0"
-path="res://.godot/imported/walk_down_body.png-e2d3fa9fe73b955e3e3be256fc2a90eb.ctex"
+uid="uid://df23k74peiw0u"
+path="res://.godot/imported/attack_right_eye.png-5a949196eaf62f35eb2927174b5cd67b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://chimerin/assets/walk_down_body.png"
-dest_files=["res://.godot/imported/walk_down_body.png-e2d3fa9fe73b955e3e3be256fc2a90eb.ctex"]
+source_file="res://chimerin_lab/assets/attack_right_eye.png"
+dest_files=["res://.godot/imported/attack_right_eye.png-5a949196eaf62f35eb2927174b5cd67b.ctex"]
 
 [params]
 

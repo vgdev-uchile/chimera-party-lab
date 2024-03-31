@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4svsr5y7mmhx"
-path="res://.godot/imported/idle_right_body.png-788ad96566701028b717a0e05addbc4d.ctex"
+uid="uid://dynwdw1a1bmml"
+path="res://.godot/imported/walk_left_body.png-73b53d29c4d598763d262a5ff90f73e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://chimerin/assets/idle_right_body.png"
-dest_files=["res://.godot/imported/idle_right_body.png-788ad96566701028b717a0e05addbc4d.ctex"]
+source_file="res://chimerin_lab/assets/walk_left_body.png"
+dest_files=["res://.godot/imported/walk_left_body.png-73b53d29c4d598763d262a5ff90f73e1.ctex"]
 
 [params]
 

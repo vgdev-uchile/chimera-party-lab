@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bh6kgrncg0gsu"
-path="res://.godot/imported/walk_left_eye.png-5ff1443eae0f5868064dc08c5981174d.ctex"
+path="res://.godot/imported/walk_left_eye.png-3659c25381aa5eb3414ace70c1f367f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://chimerin/assets/walk_left_eye.png"
-dest_files=["res://.godot/imported/walk_left_eye.png-5ff1443eae0f5868064dc08c5981174d.ctex"]
+source_file="res://chimerin_lab/assets/walk_left_eye.png"
+dest_files=["res://.godot/imported/walk_left_eye.png-3659c25381aa5eb3414ace70c1f367f2.ctex"]
 
 [params]
 

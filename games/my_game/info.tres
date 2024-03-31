@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="GameInfo" load_steps=5 format=3 uid="uid://of0x7cwcpc8o"]
 
-[ext_resource type="Texture2D" uid="uid://bcbnjudxibp0o" path="res://chimerin/assets/chimerin.png" id="1_1b8nj"]
+[ext_resource type="Texture2D" uid="uid://bcbnjudxibp0o" path="res://chimerin_lab/assets/chimerin.png" id="1_1b8nj"]
 [ext_resource type="Script" path="res://scripts/game_info.gd" id="2_a74hl"]
 [ext_resource type="Script" path="res://scripts/game_input.gd" id="2_qmcy8"]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvj1mpe5b1urq"
-path="res://.godot/imported/walk_right_body.png-e12f39aa8e11b8328a5d8c363262176a.ctex"
+uid="uid://bys0ofsenl54i"
+path="res://.godot/imported/walk_right_eye.png-1817f6a18b49808f46f7af3b9a0d2d26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://chimerin/assets/walk_right_body.png"
-dest_files=["res://.godot/imported/walk_right_body.png-e12f39aa8e11b8328a5d8c363262176a.ctex"]
+source_file="res://chimerin_lab/assets/walk_right_eye.png"
+dest_files=["res://.godot/imported/walk_right_eye.png-1817f6a18b49808f46f7af3b9a0d2d26.ctex"]
 
 [params]
 
