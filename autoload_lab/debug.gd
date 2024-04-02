@@ -4,6 +4,7 @@ extends Node
 @onready var canvas_layer  = CanvasLayer.new()
 @onready var container = VBoxContainer.new()
 
+
 func _ready() -> void:
 	if !OS.is_debug_build():
 		return

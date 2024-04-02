@@ -11,8 +11,6 @@ var data: Statics.PlayerData
 @onready var playback: AnimationNodeStateMachinePlayback = animation_tree.get("parameters/playback")
 @onready var pivot: Node2D = $Pivot
 @onready var body_sprite: Sprite2D = $Pivot/BodySprite
-@onready var label: Label = $Label
-
 
 
 func _ready() -> void:
@@ -30,7 +28,6 @@ func _physics_process(delta: float) -> void:
 	velocity = velocity.move_toward(target_velocity, acceleration * delta)
 	move_and_slide()
 
-
 	# animation
 	
 	if move_input.length() > 0.01:
@@ -41,6 +38,7 @@ func _physics_process(delta: float) -> void:
 		playback.travel("walk")
 	else:
 		playback.travel("idle")
+
 
 func _on_animation_finished(anim_name: StringName):
 	if anim_name == "idle":
