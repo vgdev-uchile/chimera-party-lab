@@ -1,9 +1,9 @@
 extends Control
 
-@onready var start_game: Button = %StartGame
-@onready var quit: Button = %Quit
 
 var _game_started := false
+@onready var start_game: Button = %StartGame
+@onready var quit: Button = %Quit
 
 
 func _ready() -> void:

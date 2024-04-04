@@ -36,6 +36,8 @@ func _process(delta: float) -> void:
 
 
 func load_game(path):
+	if is_processing():
+		return
 	if not FileAccess.file_exists(path):
 		Debug.log("The path %s doesn't exists" % path)
 		return
