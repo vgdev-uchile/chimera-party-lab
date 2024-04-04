@@ -16,7 +16,7 @@ func _on_start_game_pressed():
 	if _game_started:
 		return
 	for test_player in Game.test_players:
-		var player_data = Statics.PlayerData.new()
+		var player_data = PlayerData.new()
 		player_data.input = test_player.input
 		player_data.primary_color = test_player.color
 		Game.players.append(player_data)

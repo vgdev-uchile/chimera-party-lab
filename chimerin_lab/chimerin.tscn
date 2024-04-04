@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://c87cowtynwm55"]
+[gd_scene load_steps=48 format=3 uid="uid://c87cowtynwm55"]
 
 [ext_resource type="Script" path="res://chimerin_lab/chimerin.gd" id="1_15ywb"]
 [ext_resource type="Texture2D" uid="uid://bfnw8alh0373h" path="res://chimerin_lab/assets/idle_down_body.png" id="2_i72dj"]
@@ -28,7 +28,7 @@ shader_parameter/from = Color(0.372549, 0.803922, 0.894118, 1)
 shader_parameter/to = Color(1, 0, 0, 1)
 shader_parameter/tolerance = null
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_1ptji"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_s5k38"]
 radius = 24.0
 
 [sub_resource type="Animation" id="Animation_1u0sx"]
@@ -608,7 +608,10 @@ states/walk/position = Vector2(628, 71)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_r82lu"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_vaxpa"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_mxkgw")]
 graph_offset = Vector2(25, -25)
 
-[node name="Chimerin" type="CharacterBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_6j7eg"]
+radius = 32.0
+
+[node name="Chimerin" type="CharacterBody2D" groups=["chimerin"]]
 motion_mode = 1
 script = ExtResource("1_15ywb")
 
@@ -627,7 +630,7 @@ script = ExtResource("5_21cin")
 source = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_1ptji")
+shape = SubResource("CircleShape2D_s5k38")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -644,3 +647,8 @@ anim_player = NodePath("../AnimationPlayer")
 "parameters/BlendSpace2D 2/blend_position" = Vector2(0, 0)
 parameters/idle/blend_position = Vector2(-0.107547, -0.0621119)
 parameters/walk/blend_position = Vector2(-0.756604, 0.552795)
+
+[node name="PushArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PushArea"]
+shape = SubResource("CircleShape2D_6j7eg")

@@ -1,38 +1,48 @@
-class_name Chimerin
-extends CharacterBody2D
+extends Player
 
-var speed = 500
-var acceleration = 1000
-var input = 0
 
-var data: Statics.PlayerData
-
+@export var speed = 500
+@export var acceleration = 2000
+var push_direction: Vector2 = Vector2.ZERO
+var _pushers: Array[CharacterBody2D] = []
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var playback: AnimationNodeStateMachinePlayback = animation_tree.get("parameters/playback")
 @onready var pivot: Node2D = $Pivot
 @onready var body_sprite: Sprite2D = $Pivot/BodySprite
+@onready var push_area: Area2D = $PushArea
 
 
 func _ready() -> void:
-	animation_tree.animation_finished.connect(_on_animation_finished)
 	animation_tree.active = true
+	push_area.body_entered.connect(_on_body_entered)
+	push_area.body_exited.connect(_on_body_exited)
 
 
 func _physics_process(delta: float) -> void:
 	var move_input = Input.get_vector(
-		"move_left_%d" % input,
-		"move_right_%d" % input,
-		"move_up_%d" % input,
-		"move_down_%d" % input)
+		move_left,
+		move_right,
+		move_up,
+		move_down)
+	
+	var direction = move_input
+	push_direction = move_input
+	
+	# handle pushing
+	for pusher in _pushers:
+		var is_pushing = pusher.to_local(global_position).dot(pusher.push_direction) > 0
+		if is_pushing:
+			move_input += pusher.push_direction.project(global_position - pusher.global_position)
+
 	var target_velocity = speed * move_input
 	velocity = velocity.move_toward(target_velocity, acceleration * delta)
+	
 	move_and_slide()
 
 	# animation
-	
-	if move_input.length() > 0.01:
-		animation_tree.set("parameters/idle/blend_position", move_input)
-		animation_tree.set("parameters/walk/blend_position", move_input)
+	if direction.length() > 0.01:
+		animation_tree.set("parameters/idle/blend_position", direction)
+		animation_tree.set("parameters/walk/blend_position", direction)
 	
 	if velocity.length() > 50 or (playback.get_current_node() == "walk" and target_velocity.length() > 50):
 		playback.travel("walk")
@@ -40,20 +50,23 @@ func _physics_process(delta: float) -> void:
 		playback.travel("idle")
 
 
-func _on_animation_finished(anim_name: StringName):
-	if anim_name == "idle":
-		animation_tree.set("parameters/idle/BlendTree/TimeScale/scale", 1/randf_range(1, 3))
+func update_color() -> void:
+	body_sprite.self_modulate = data.primary_color
 
 
-# Call after add_child
-func setup(player_data: Statics.PlayerData) -> void:
-	data = player_data
-	input = player_data.input
-	change_color(player_data.primary_color)
+func start_pushing(pusher: CharacterBody2D) -> void:
+	_pushers.append(pusher)
 
 
-func change_color(color: Color):
-	body_sprite.self_modulate = color
-	for player in Game.players:
-		if player.input == input:
-			player.primary_color = color
+func stop_pushing(pusher: CharacterBody2D) -> void:
+	_pushers.erase(pusher)
+
+
+func _on_body_entered(body: Node) -> void:
+	if body != self and body.is_in_group("chimerin"):
+		body.start_pushing(self)
+
+
+func _on_body_exited(body: Node) -> void:
+	if body != self and body.is_in_group("chimerin"):
+		body.stop_pushing(self)

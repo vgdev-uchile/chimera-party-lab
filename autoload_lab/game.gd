@@ -5,7 +5,7 @@ extends Control
 @export var test_game_path: String # something like res://games/mygame/main.tscn
 @export var test_game_info: GameInfo
 
-var players: Array[Statics.PlayerData] = []
+var players: Array[PlayerData] = []
 
 var _game_to_load: String
 @onready var animation_player: AnimationPlayer = $CanvasLayer/Fade/AnimationPlayer
