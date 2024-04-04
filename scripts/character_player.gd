@@ -1,4 +1,4 @@
-class_name Player
+class_name CharacterPlayer
 extends CharacterBody2D
 ## Base class for a player.
 ##

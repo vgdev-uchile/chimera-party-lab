@@ -1,4 +1,4 @@
-extends Player
+extends CharacterPlayer
 
 
 @export var speed = 500
