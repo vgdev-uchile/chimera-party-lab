@@ -36,7 +36,8 @@ func _ready() -> void:
 		update_color()
 
 
-## Setup player input.
+## Setup player data.[br]
+## Must be called before instancing the player.
 func setup(player_data: PlayerData) -> void:
 	data = player_data
 	update_color()

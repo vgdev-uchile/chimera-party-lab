@@ -31,5 +31,4 @@ func _ready() -> void:
 
 func _on_score_timeout() -> void:
 	for player_data in Game.players:
-		player_data.local_score += 100
-		break
+		player_data.local_score += 10
