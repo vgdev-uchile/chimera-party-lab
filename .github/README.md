@@ -352,8 +352,7 @@ Una vez tengas listo tu juego, debes exportarlo para que se pueda instalar en el
 4. Nombrar el archivo resultante con el **mismo nombre que la carpeta de tu juego**.
 5. Guardar como `Godot Project Pack .PCK`.
 
-> ![IMPORTANT]
-> todo: gif
+![Export Process](images/export.gif)
 
 ## Importación
 
