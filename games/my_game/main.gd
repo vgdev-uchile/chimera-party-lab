@@ -20,9 +20,10 @@ func _ready() -> void:
 		players.add_child(player_inst)
 		player_inst.setup(player_data)
 		
-		var score_inst = score_scene.instantiate()
-		score_inst.setup(player_data)
-		score_container.add_child(score_inst)
+		if score_scene:
+			var score_inst = score_scene.instantiate()
+			score_inst.setup(player_data)
+			score_container.add_child(score_inst)
 	
 	score_timer.timeout.connect(_on_score_timeout)
 	game_timer.timeout.connect(func(): Game.end_game())

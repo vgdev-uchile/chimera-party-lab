@@ -92,12 +92,6 @@ layout_mode = 2
 mouse_filter = 2
 columns = 8
 
-[node name="Score" parent="CanvasLayer/MarginContainer/PanelContainer/MarginContainer/ScoreContainer" instance_placeholder="res://games/my_game/ui/score.tscn"]
-layout_mode = 2
-
-[node name="Score2" parent="CanvasLayer/MarginContainer/PanelContainer/MarginContainer/ScoreContainer" instance_placeholder="res://games/my_game/ui/score.tscn"]
-layout_mode = 2
-
 [node name="GridContainer" type="GridContainer" parent="CanvasLayer"]
 offset_right = 40.0
 offset_bottom = 40.0
