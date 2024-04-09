@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var player_scene: PackedScene
-const SCORE = preload("res://games/my_game/ui/score.tscn")
+@export var score_scene: PackedScene
 @onready var players: Node2D = $Players
 @onready var spawns: Node2D = $Spawns
 @onready var score_timer: Timer = $ScoreTimer
@@ -20,9 +20,9 @@ func _ready() -> void:
 		players.add_child(player_inst)
 		player_inst.setup(player_data)
 		
-		var score = SCORE.instantiate()
-		score.setup(player_data)
-		score_container.add_child(score)
+		var score_inst = score_scene.instantiate()
+		score_inst.setup(player_data)
+		score_container.add_child(score_inst)
 	
 	score_timer.timeout.connect(_on_score_timeout)
 	game_timer.timeout.connect(func(): Game.end_game())
