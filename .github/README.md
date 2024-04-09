@@ -12,7 +12,7 @@
   <a href="#desarrollo">Ejemplo</a> •
   <a href="#importación">Exportación</a> •
   <a href="#importación">Importación</a> •
-  <a href="#creditos">Créditos</a>
+  <a href="#créditos">Créditos</a>
 </p>
 
 ---
@@ -21,7 +21,7 @@
 
 0. Instala [Godot 4.2.x](https://godotengine.org/download).
 1. Clona este repositorio.
-2. Abre godot e importa el proyecto.
+2. Abre Godot e importa el proyecto.
 
 ## Diseño
 
@@ -54,17 +54,17 @@ También se definen los inputs que usa tu juego. Estos se muestran como iconos a
 
 ### Configuración del ambiente de testing
 
-En el nodo `Game` de `game.tscn` en `autoload_lab` se definen parametros de testeo, que no seran aplicados en la versión exportada del minijuego.
+En el nodo `Game` de `game.tscn` en `autoload_lab` se definen parametros de testeo, que no serán aplicados en la versión exportada del minijuego.
 
 #### Test Players
 
-El numero de jugadores que deseas tener al **testear** tu juego, con sus colores correspondientes.
+El número de jugadores que deseas tener al **testear** tu juego, con sus colores correspondientes.
 
 ![Test Players](images/test_players.png)
 
 #### Test Game Path
 
-La ruta del `main.tscn` de tu minijeugo, luego de que le hayas cambiado el nombre a la carpeta.
+La ruta del `main.tscn` de tu minijuego, luego de que le hayas cambiado el nombre a la carpeta.
 
 #### Test Game Info
 
@@ -76,13 +76,13 @@ Ponle play al proyecto. Deberías ver la pantalla de inicio con la información 
 
 ![Pantalla de Información](images/infoscreen.png)
 
-Luego apreta `espacio` o `enter` para comenzar la ronda de prueba.
+Luego presiona `espacio` o `enter` para comenzar la ronda de prueba.
 
 ![Juego](images/game.png)
 
 ## Desarrollo
 
-A continuación, se explica como usar las interfaces y carácteristicas de *Chimera Party* para crear tu minijuego. El ejemplo que viene con el proyecto se explica en [la siguiente sección](#ejemplo).
+A continuación, se explica cómo usar las interfaces y características de *Chimera Party* para crear tu minijuego. El ejemplo que viene con el proyecto se explica en [la siguiente sección](#ejemplo).
 
 ### Jugadores
 
@@ -157,7 +157,7 @@ El color del jugador se puede conseguir con
 player_data.color
 ```
 
-Si usas de base la clase [CharacterPlayer](https://github.com/vgdev-uchile/chimera-party-lab/blob/master/scripts/character_player.gd), puedes hacerle override a la función `update_color` para definir que hacer con el color del jugador. Por ejemplo:
+Si usas de base la clase [CharacterPlayer](https://github.com/vgdev-uchile/chimera-party-lab/blob/master/scripts/character_player.gd), puedes hacerle override a la función `update_color` para definir qué hacer con el color del jugador. Por ejemplo:
 
 ```gdscript
 func update_color() -> void:
@@ -211,15 +211,15 @@ El código de esta clase se puede encontrar en `scripts/character_player.gd`.
 
 ## Ejemplo
 
-El juego de ejemplo que viene incluido en el proyecto, consiste en un juego 2D con personajes instanciados que extienden la clase [CharacterPlayer](#characterplayer). Cada jugador acumula puntaje simplemente por existir, y el juego se termina luego de 15 segundos.
+El juego de ejemplo que viene incluido en el proyecto consiste en un juego 2D con personajes instanciados que extienden la clase [CharacterPlayer](#characterplayer). Cada jugador acumula puntaje simplemente por existir, y el juego se termina luego de 15 segundos.
 
 ### MyGame
 
-El nodo principal de `main.tscn` (recordar que `main.tscn` es la escena del minijuego que se instancia al inciar una ronda).
+El nodo principal de `main.tscn` (recordar que `main.tscn` es la escena del minijuego que se instancia al iniciar una ronda).
 
 En el evento `_ready` se encarga de:
 
-1. Instanciar los prsonajes, corde al número de jugadores
+1. Instanciar los personajes, acorde al número de jugadores
 2. Instanciar los contadores de puntaje
 
 En la señal `_on_score_timeout` se encarga de sumarle puntaje a cada jugador.
@@ -232,7 +232,7 @@ Este nodo existe para ser padre de todos los personajes que se instancien. Tiene
 
 ### Spawns
 
-En este nodo se muestra un ejemplo de como se podría definir donde aparecen los personajes, usando nodos `Marker2D`, que luego en [MyGame](#mygame) se usan de referencia.
+En este nodo se muestra un ejemplo de cómo se podría definir donde aparecen los personajes, usando nodos `Marker2D`, que luego en [MyGame](#mygame) se usan de referencia.
 
 ![Spawns](images/spawns.png)
 
@@ -260,7 +260,7 @@ La escena `chimerin_lab/chimerin.tscn` extiende la clase [CharacterPlayer](#char
 > [!TIP]
 > Los nodos `BodySprite` y `EyeSprite` son separados para poder aplicar el color solo al cuerpo.
 
-A continuación se explica lo que agreg por sobre la base
+A continuación se explica lo que agrega por sobre la base
 
 #### Input/Movimiento
 
@@ -310,7 +310,7 @@ func update_color() -> void:
 
 #### Empuje
 
-Los chimerines se pueden empujar entre si. Esto se maneja antes del movimiento en el `_physics_process`:
+Los chimerines se pueden empujar entre sí. Esto se maneja antes del movimiento en el `_physics_process`:
 
 ```gdscript
 var direction = move_input
@@ -346,7 +346,7 @@ func stop_pushing(pusher: CharacterBody2D) -> void:
 
 Una vez tengas listo tu juego, debes exportarlo para que se pueda instalar en el *Chimera Party*.
 
-1. Ir al menu `Project` > `Export` del proyecto en Godot.
+1. Ir al menú `Project` > `Export` del proyecto en Godot.
 2. Elegir la plataforma. Por defecto *Chimera Party* está pensado para Windows.
 3. Seleccionar la opción `PCK/Zip`.
 4. Nombrar el archivo resultante con el **mismo nombre que la carpeta de tu juego**.
@@ -375,7 +375,7 @@ Para agregar un minijuego a la rotación del Chimera Party:
 > [!NOTE]
 > En una partida normal cuando sale un minijuego una vez, su probabilidad de salir nuevamente en la misma partida se reduce a un 10%.
 
-## Creditos
+## Créditos
 
 - Proyecto de la Comunidad VGDEV UCHILE.
 - Creado por: [Elías Zelada](https://github.com/elixs)
