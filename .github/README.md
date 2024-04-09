@@ -33,7 +33,8 @@ Al desarrollar tu minijuego, tienes libertad total en cuanto a la temática y la
 
 Una vez [instalado](#instalación), cambia el nombre de la carpeta `res://games/my_game` al nombre de tu juego. La carpeta `my_game` ya viene con un boilerplate de juego que puedes usar de referencia.
 
-> [!WARNING] Todo el contenido de tu juego debe estar dentro de la carpeta creada a base de "my_game". Esto incluye código, escenas, sprites, etc.
+> [!WARNING]
+> Todo el contenido de tu juego debe estar dentro de la carpeta creada a base de "my_game". Esto incluye código, escenas, sprites, etc.
 
 ### Datos del minijuego
 
@@ -45,7 +46,8 @@ También se definen los inputs que usa tu juego. Estos se muestran como iconos a
 
 ![Input](images/gameinfo2.png)
 
-> [!TIP] Puedes ver un preview de tu pantalla de información corriendo la escena game_info.tscn en la carpeta ui_lab.
+> [!TIP]
+> Puedes ver un preview de tu pantalla de información corriendo la escena game_info.tscn en la carpeta ui_lab.
 
 ### Configuración del ambiente de testing
 
@@ -149,7 +151,8 @@ func update_color() -> void:
     body_sprite.self_modulate = data.primary_color
 ```
 
-> [!IMPORTANT] Pendiente: incluir explicación de los shaders
+> [!IMPORTANT]
+> Pendiente: incluir explicación de los shaders
 
 ### Puntaje
 
@@ -179,6 +182,7 @@ Una vez tengas listo tu juego, debes exportarlo para que se pueda instalar en el
 4. Nombrar el archivo resultante con el **mismo nombre que la carpeta de tu juego**.
 5. Guardar como `Godot Project Pack .PCK`.
 
+> ![IMPORTANT]
 > todo: gif
 
 ## Importación
@@ -199,7 +203,8 @@ Para agregar un minijuego a la rotación del Chimera Party:
 └── Chimera_Party.exe
 ```
 
-> [!NOTE] En una partida normal cuando sale un minijuego una vez, su probabilidad de salir nuevamente en la misma partida se reduce a un 10%.
+> [!NOTE]
+> En una partida normal cuando sale un minijuego una vez, su probabilidad de salir nuevamente en la misma partida se reduce a un 10%.
 
 ## Creditos
 
