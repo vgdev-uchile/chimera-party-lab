@@ -34,7 +34,9 @@ Al desarrollar tu minijuego, tienes libertad total en cuanto a la temática y la
 
 ## Setup
 
-Una vez [instalado](#instalación), cambia el nombre de la carpeta `res://games/my_game` al nombre de tu juego. La carpeta `my_game` ya viene con un boilerplate de juego que puedes usar de referencia. Este código se explica en la [sección de ejemplo](#ejemplo).
+Una vez [instalado](#instalación), cambia el nombre de la carpeta `res://games/my_game` al nombre de tu juego. Por ejemplo, si tu minijuego se llama "Super Gaming" la carpeta debería quedar como `res://games/super_gaming`.
+
+La carpeta `my_game` ya viene con un boilerplate de juego que puedes usar de referencia. Este código se explica en la [sección de ejemplo](#ejemplo).
 
 > [!WARNING]
 > Todo el contenido de tu juego debe estar dentro de la carpeta creada a base de "my_game". Esto incluye código, escenas, sprites, etc.
