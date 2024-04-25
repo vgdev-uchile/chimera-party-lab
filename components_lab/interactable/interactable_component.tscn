@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://components_lab/interactable/interactable_component.gd" id="1_x5qlv"]
 
 [node name="InteractableComponent" type="Area3D"]
+monitorable = false
 script = ExtResource("1_x5qlv")
 
 [node name="CollisionShape" type="CollisionShape3D" parent="."]

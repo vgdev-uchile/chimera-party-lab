@@ -1,7 +1,7 @@
 class_name InteractableComponent3D
 extends Area3D
 
-signal interacted(player_id: int)
+signal interacted(player_component: PlayerComponent)
 
 @export var radius: float = 1.0 
 
@@ -15,6 +15,8 @@ func _ready():
 	sphere_shape.radius = radius
 	collision_shape.shape = sphere_shape
 	
+	monitorable = false
+	
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
 
@@ -22,21 +24,21 @@ func _ready():
 func _on_body_entered(body: Node3D):
 	for child in body.get_children():
 		if child is PlayerComponent: 
-			InteractableManager.add_interactable_component_3d(self, child.data.input)
+			InteractableManager.add_interactable_component_3d(self, child)
 			break
 
 # Called when a body exits the component area
 func _on_body_exited(body: Node3D):
 	for child in body.get_children():
 		if child is PlayerComponent:
-			InteractableManager.remove_interactable_component_3d(self, child.data.input)
+			InteractableManager.remove_interactable_component_3d(self, child)
 			break
 
 # Public
 
 # Interacts with the given player
-func interact(player_input: int):
-	interacted.emit(player_input)
+func interact(player_component: PlayerComponent):
+	interacted.emit(player_component)
 
 # Shows the given player input
 func show_input(player_input: int):
@@ -45,3 +47,7 @@ func show_input(player_input: int):
 # Hides the given player input
 func hide_input(player_input: int):
 	pass
+
+# Disables the interactable
+func disable():
+	monitoring = false
