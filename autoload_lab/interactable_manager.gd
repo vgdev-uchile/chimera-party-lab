@@ -1,17 +1,17 @@
 extends Node
 
+var interaction_action: String = "action_a_%d"
+
 var players_components: Array[PlayerComponent] = [null, null, null, null, null, null, null, null]
 
 # Array[Array[InteractableComponent3D]
 var players_interactable_lists_3d: Array[Array] = [[], [], [], [], [], [], [], []]
 
-var interaction_action: String = "action_a_%d"
-
 # Private
 
 # Called when the node enters the scene tree for the first time
 func _ready():
-	pass # Replace with function body.
+	set_process_input(false)
 
 # Called on an input event trigger
 func _input(event: InputEvent):
@@ -30,6 +30,14 @@ func _input(event: InputEvent):
 			interactable_list.back().interact(player_component)
 
 # Public
+
+# Activates the interactable manager
+func activate() -> void:
+	set_process_input(true)
+	
+# Deactivates the interactable manager
+func deactivate() -> void:
+	set_process_input(false)
 
 # Sets the interaction action
 func set_interaction_action(action: String) -> void:
