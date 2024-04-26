@@ -10,11 +10,11 @@ var players_interactable_lists_3d: Array[Array] = [[], [], [], [], [], [], [], [
 # Private
 
 # Called when the node enters the scene tree for the first time
-func _ready():
+func _ready() -> void:
 	set_process_input(false)
 
 # Called on an input event trigger
-func _input(event: InputEvent):
+func _input(event: InputEvent) -> void:
 	for player_input in range(players_interactable_lists_3d.size()):
 		if not event.is_action_pressed(interaction_action % player_input):
 			continue
@@ -73,5 +73,10 @@ func remove_interactable_component_3d(interactable: InteractableComponent3D, pla
 	if not interactable_list.is_empty():
 		interactable_list.back().show_input(player_input)
 
+# Removes an interactable component 3D from every list
+func remove_freed_interactable_component_3d(interactable: InteractableComponent3D) -> void:
+	for interactable_list in players_interactable_lists_3d:
+		if interactable in interactable_list:
+			interactable_list.erase(interactable)
 
 
