@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Debug="*res://autoload_lab/debug.gd"
 Game="*res://autoload_lab/game.tscn"
+InteractableManager="*res://autoload_lab/interactable_manager.gd"
 
 [display]
 
