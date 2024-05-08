@@ -6,6 +6,7 @@ var _game_started := false
 @onready var settings: Button = %Settings
 @onready var quit: Button = %Quit
 
+
 func _ready() -> void:
 	start_game.pressed.connect(_on_start_game_pressed)
 	quit.pressed.connect(func (): get_tree().quit())

@@ -1,12 +1,12 @@
 [gd_scene load_steps=7 format=3 uid="uid://bdw1l3krnkjt2"]
 
 [ext_resource type="Script" path="res://ui_lab/main_menu.gd" id="1_03p47"]
-[ext_resource type="Shader" path="res://shaders/animated_diamond_pattern.gdshader" id="2_atbsl"]
+[ext_resource type="Shader" path="res://common/shaders/animated_diamond_pattern.gdshader" id="2_lydir"]
 [ext_resource type="Texture2D" uid="uid://chott21qimfuk" path="res://assets/sprites/ui_boder.png" id="3_6eeu1"]
 [ext_resource type="FontFile" uid="uid://d2prf68aedwvv" path="res://common/assets/fonts/Abaddon_Fonts_v1.2/Abaddon Bold.ttf" id="4_ob21m"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qx0wo"]
-shader = ExtResource("2_atbsl")
+shader = ExtResource("2_lydir")
 shader_parameter/color = Color(0, 0.501961, 1, 0.345098)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_blx7x"]

@@ -1,12 +1,12 @@
 [gd_scene load_steps=5 format=3 uid="uid://ch8vx08k4dap7"]
 
-[ext_resource type="Shader" path="res://shaders/color_swap.gdshader" id="1_im2b7"]
 [ext_resource type="Script" path="res://examples/color_swap.gd" id="1_yl3wc"]
+[ext_resource type="Shader" path="res://common/shaders/color_swap.gdshader" id="2_ogcib"]
 [ext_resource type="Texture2D" uid="uid://cu3204mjrgtd2" path="res://examples/color_swap.png" id="2_wtmyd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3w3fo"]
 resource_local_to_scene = true
-shader = ExtResource("1_im2b7")
+shader = ExtResource("2_ogcib")
 shader_parameter/from = Color(0.745098, 0.423529, 0.678431, 1)
 shader_parameter/to = Color(0.831373, 0.686275, 0.215686, 1)
 shader_parameter/tolerance = 0.3
