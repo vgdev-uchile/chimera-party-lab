@@ -30,7 +30,7 @@ window/stretch/mode="canvas_items"
 
 [gui]
 
-theme/custom="res://resources/theme.tres"
+theme/custom="res://common/resources/theme.tres"
 
 [input]
 
