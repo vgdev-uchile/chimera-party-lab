@@ -1,6 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://bdw1l3krnkjt2"]
+[gd_scene load_steps=7 format=3 uid="uid://bdw1l3krnkjt2"]
 
 [ext_resource type="Script" path="res://ui_lab/main_menu.gd" id="1_03p47"]
+[ext_resource type="Shader" path="res://shaders/animated_diamond_pattern.gdshader" id="2_atbsl"]
+[ext_resource type="Texture2D" uid="uid://chott21qimfuk" path="res://assets/sprites/ui_boder.png" id="3_6eeu1"]
+[ext_resource type="FontFile" uid="uid://d2prf68aedwvv" path="res://common/assets/fonts/Abaddon_Fonts_v1.2/Abaddon Bold.ttf" id="4_ob21m"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qx0wo"]
+shader = ExtResource("2_atbsl")
+shader_parameter/color = Color(0, 0.501961, 1, 0.345098)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_blx7x"]
+content_margin_left = 36.0
+content_margin_top = 36.0
+texture = ExtResource("3_6eeu1")
+texture_margin_left = 48.0
+texture_margin_top = 48.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -11,6 +27,23 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_03p47")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_qx0wo")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -18,32 +51,46 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -505.5
-offset_top = -230.5
-offset_right = 505.5
-offset_bottom = 230.5
+offset_left = -188.0
+offset_top = -273.0
+offset_right = 188.0
+offset_bottom = 273.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_blx7x")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
-theme_type_variation = &"TitleLabel"
-text = "Chimera Party Lab"
+theme_override_constants/line_spacing = -32
+theme_override_fonts/font = ExtResource("4_ob21m")
+theme_override_font_sizes/font_size = 96
+text = "Chimera
+Party
+Lab"
+horizontal_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 alignment = 1
 
-[node name="StartGame" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="StartGame" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "START GAME"
 
-[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="Settings" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "SETTINGS"
+
+[node name="Quit" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "QUIT"

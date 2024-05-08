@@ -1,17 +1,11 @@
-[gd_resource type="Resource" script_class="GameInfo" load_steps=5 format=3 uid="uid://of0x7cwcpc8o"]
+[gd_resource type="Resource" script_class="GameInfo" load_steps=3 format=3 uid="uid://of0x7cwcpc8o"]
 
-[ext_resource type="Texture2D" uid="uid://bcbnjudxibp0o" path="res://chimerin_lab/assets/chimerin.png" id="1_1b8nj"]
-[ext_resource type="Script" path="res://scripts/game_info.gd" id="2_a74hl"]
-[ext_resource type="Script" path="res://scripts/game_input.gd" id="2_qmcy8"]
-
-[sub_resource type="Resource" id="Resource_l1ktx"]
-script = ExtResource("2_qmcy8")
-inputs = 15
-description = "Walk"
+[ext_resource type="Script" path="res://common/scripts/game_info.gd" id="1_i8gq6"]
+[ext_resource type="Texture2D" uid="uid://b11hhvdk30w7e" path="res://games/my_game/assets/lab_tile.png" id="1_s5148"]
 
 [resource]
-script = ExtResource("2_a74hl")
+script = ExtResource("1_i8gq6")
 name = "My Game"
 description = "This is the [shake level=20]description[/shake] of my game"
-image = ExtResource("1_1b8nj")
-inputs = Array[ExtResource("2_qmcy8")]([SubResource("Resource_l1ktx")])
+image = ExtResource("1_s5148")
+inputs = Array[Resource("res://common/scripts/game_input.gd")]([])

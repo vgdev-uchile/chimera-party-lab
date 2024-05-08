@@ -18,7 +18,7 @@ func setup(player_data: PlayerData) -> void:
 
 
 func _update():
-	color_rect.color = _player_data.primary_color
+	color_rect.color = _player_data.color
 	_update_score(_player_data.local_score)
 
 

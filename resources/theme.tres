@@ -1,6 +1,9 @@
-[gd_resource type="Theme" format=3 uid="uid://dipj4q6bj1b6"]
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dipj4q6bj1b6"]
+
+[ext_resource type="FontFile" uid="uid://dh0hwfmlfr8tf" path="res://assets/fonts/Abaddon_Fonts_v1.2/Abaddon Light.ttf" id="1_8c3n1"]
 
 [resource]
+default_font = ExtResource("1_8c3n1")
 default_font_size = 48
 BoxContainer/constants/separation = 12
 GridContainer/constants/h_separation = 12

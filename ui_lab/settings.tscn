@@ -1,0 +1,156 @@
+[gd_scene load_steps=6 format=3 uid="uid://d4ldts0rw5g7h"]
+
+[ext_resource type="Texture2D" uid="uid://chott21qimfuk" path="res://assets/sprites/ui_boder.png" id="1_6u1q4"]
+[ext_resource type="FontFile" uid="uid://d2prf68aedwvv" path="res://common/assets/fonts/Abaddon_Fonts_v1.2/Abaddon Bold.ttf" id="2_dg5lq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6smb4"]
+content_margin_left = 36.0
+content_margin_top = 36.0
+texture = ExtResource("1_6u1q4")
+texture_margin_left = 48.0
+texture_margin_top = 48.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+
+[sub_resource type="SyntaxHighlighter" id="SyntaxHighlighter_0u68w"]
+
+[sub_resource type="SyntaxHighlighter" id="SyntaxHighlighter_x3x7f"]
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -420.5
+offset_right = 838.0
+offset_bottom = 420.5
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6smb4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/line_spacing = -32
+theme_override_fonts/font = ExtResource("2_dg5lq")
+theme_override_font_sizes/font_size = 96
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 40
+columns = 2
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Name:"
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "My Game"
+
+[node name="Label2" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Description"
+
+[node name="TextEdit2" type="TextEdit" parent="MarginContainer/PanelContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "sdfsdf
+sdfsdf
+sdf"
+syntax_highlighter = SubResource("SyntaxHighlighter_0u68w")
+
+[node name="Label3" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Image"
+
+[node name="Button" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Select"
+
+[node name="Label4" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Inputs"
+
+[node name="Preview" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1031.0
+offset_top = -420.0
+offset_bottom = 421.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Preview"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6smb4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Preview/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Preview/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/line_spacing = -32
+theme_override_fonts/font = ExtResource("2_dg5lq")
+theme_override_font_sizes/font_size = 96
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="Preview/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 40
+columns = 2
+
+[node name="Label" type="Label" parent="Preview/PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Name:"
+
+[node name="LineEdit" type="LineEdit" parent="Preview/PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "My Game"
+
+[node name="Label2" type="Label" parent="Preview/PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Description"
+
+[node name="TextEdit2" type="TextEdit" parent="Preview/PanelContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "sdfsdf
+sdfsdf
+sdf"
+syntax_highlighter = SubResource("SyntaxHighlighter_x3x7f")
+
+[node name="Label3" type="Label" parent="Preview/PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Image"
+
+[node name="Button" type="Button" parent="Preview/PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Select"
+
+[node name="Label4" type="Label" parent="Preview/PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Inputs"
