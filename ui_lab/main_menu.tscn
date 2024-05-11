@@ -1,22 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://bdw1l3krnkjt2"]
+[gd_scene load_steps=6 format=3 uid="uid://bdw1l3krnkjt2"]
 
 [ext_resource type="Script" path="res://ui_lab/main_menu.gd" id="1_03p47"]
 [ext_resource type="Shader" path="res://common/shaders/animated_diamond_pattern.gdshader" id="2_lydir"]
-[ext_resource type="Texture2D" uid="uid://chott21qimfuk" path="res://assets/sprites/ui_boder.png" id="3_6eeu1"]
+[ext_resource type="StyleBox" uid="uid://cpkgprg55uey5" path="res://ui_lab/panel.tres" id="3_d1o3h"]
 [ext_resource type="FontFile" uid="uid://d2prf68aedwvv" path="res://common/assets/fonts/Abaddon_Fonts_v1.2/Abaddon Bold.ttf" id="4_ob21m"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qx0wo"]
 shader = ExtResource("2_lydir")
 shader_parameter/color = Color(0, 0.501961, 1, 0.345098)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_blx7x"]
-content_margin_left = 36.0
-content_margin_top = 36.0
-texture = ExtResource("3_6eeu1")
-texture_margin_left = 48.0
-texture_margin_top = 48.0
-texture_margin_right = 30.0
-texture_margin_bottom = 30.0
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -60,7 +51,7 @@ grow_vertical = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_blx7x")
+theme_override_styles/panel = ExtResource("3_d1o3h")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer"]
 layout_mode = 2

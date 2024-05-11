@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://autoload_lab/game.gd" id="1_e4b7m"]
 [ext_resource type="Script" path="res://common/scripts/player_resource.gd" id="2_6hqau"]
-[ext_resource type="Resource" uid="uid://of0x7cwcpc8o" path="res://games/my_game/info.tres" id="3_xhnac"]
+[ext_resource type="Resource" uid="uid://s8enhofex5ek" path="res://games/my_game/info.tres" id="3_xhnac"]
 
 [sub_resource type="Resource" id="Resource_e1pk3"]
 script = ExtResource("2_6hqau")

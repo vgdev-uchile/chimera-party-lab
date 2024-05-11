@@ -10,7 +10,7 @@ var _game_started := false
 func _ready() -> void:
 	start_game.pressed.connect(_on_start_game_pressed)
 	quit.pressed.connect(func (): get_tree().quit())
-	settings.pressed.connect(func(): get_tree().change_scene_to_file("res://ui_lab/settings.tscn"))
+	settings.pressed.connect(func(): get_tree().change_scene_to_file("res://ui_lab/settings/settings.tscn"))
 	start_game.grab_focus()
 
 
