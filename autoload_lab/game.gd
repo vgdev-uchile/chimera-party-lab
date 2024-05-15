@@ -2,7 +2,7 @@ extends Control
 
 
 @export var test_players: Array[PlayerResource] = []
-@export var test_game_path: String # something like res://games/mygame/main.tscn
+@export var test_game_path: String # something like res://games/my_game/main.tscn
 @export var test_game_info: GameInfo
 
 var players: Array[PlayerData] = []
@@ -51,3 +51,14 @@ func end_game() -> void:
 	Game.players.clear()
 	load_game("res://ui_lab/main_menu.tscn")
 	
+
+func get_current_game_info() -> GameInfo:
+	return test_game_info
+
+
+func load_current_game():
+	load_game(test_game_path)
+
+
+func get_current_game_path() -> String:
+	return "res://games/my_game"

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://ckrrpdn8rkl17"]
 
 [ext_resource type="Script" path="res://games/my_game/main.gd" id="1_aue0y"]
-[ext_resource type="PackedScene" uid="uid://c87cowtynwm55" path="res://chimerin_lab/chimerin.tscn" id="2_e27ex"]
+[ext_resource type="PackedScene" uid="uid://c87cowtynwm55" path="res://common/chimerin/chimerin.tscn" id="2_e27ex"]
 [ext_resource type="Texture2D" uid="uid://b11hhvdk30w7e" path="res://games/my_game/assets/lab_tile.png" id="3_tk073"]
 [ext_resource type="PackedScene" uid="uid://cbcoeleb7kf2s" path="res://games/my_game/ui/score.tscn" id="3_yy0dh"]
 
@@ -29,10 +29,10 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0
 [node name="Players" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="Chimerin" parent="Players" instance_placeholder="res://chimerin_lab/chimerin.tscn"]
+[node name="Chimerin" parent="Players" instance_placeholder="res://common/chimerin/chimerin.tscn"]
 position = Vector2(560, 640)
 
-[node name="Chimerin2" parent="Players" instance_placeholder="res://chimerin_lab/chimerin.tscn"]
+[node name="Chimerin2" parent="Players" instance_placeholder="res://common/chimerin/chimerin.tscn"]
 position = Vector2(1360, 640)
 
 [node name="Spawns" type="Node2D" parent="."]
@@ -55,7 +55,7 @@ wait_time = 0.9
 autostart = true
 
 [node name="GameTimer" type="Timer" parent="."]
-wait_time = 15.0
+wait_time = 9.5
 one_shot = true
 autostart = true
 

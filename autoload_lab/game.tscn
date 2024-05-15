@@ -1,28 +1,18 @@
-[gd_scene load_steps=12 format=3 uid="uid://c72yce6p8dtt6"]
+[gd_scene load_steps=10 format=3 uid="uid://c72yce6p8dtt6"]
 
 [ext_resource type="Script" path="res://autoload_lab/game.gd" id="1_e4b7m"]
-[ext_resource type="Script" path="res://scripts/player_resource.gd" id="2_e43pt"]
-[ext_resource type="Resource" uid="uid://of0x7cwcpc8o" path="res://games/my_game/info.tres" id="3_xhnac"]
+[ext_resource type="Script" path="res://common/scripts/player_resource.gd" id="2_6hqau"]
+[ext_resource type="Resource" uid="uid://s8enhofex5ek" path="res://games/my_game/info.tres" id="3_xhnac"]
 
-[sub_resource type="Resource" id="Resource_2mytf"]
-script = ExtResource("2_e43pt")
+[sub_resource type="Resource" id="Resource_e1pk3"]
+script = ExtResource("2_6hqau")
 color = Color(1, 0, 0, 1)
 input = 0
 
-[sub_resource type="Resource" id="Resource_f8b6q"]
-script = ExtResource("2_e43pt")
+[sub_resource type="Resource" id="Resource_8jshv"]
+script = ExtResource("2_6hqau")
 color = Color(0, 0, 1, 1)
 input = 3
-
-[sub_resource type="Resource" id="Resource_v738e"]
-script = ExtResource("2_e43pt")
-color = Color(0.466667, 0.466667, 0.466667, 1)
-input = 1
-
-[sub_resource type="Resource" id="Resource_g0etl"]
-script = ExtResource("2_e43pt")
-color = Color(0.694118, 0.580392, 0, 1)
-input = 2
 
 [sub_resource type="Animation" id="Animation_qb6d1"]
 length = 0.001
@@ -123,7 +113,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_e4b7m")
-test_players = Array[ExtResource("2_e43pt")]([SubResource("Resource_2mytf"), SubResource("Resource_f8b6q"), SubResource("Resource_v738e"), SubResource("Resource_g0etl")])
+test_players = Array[ExtResource("2_6hqau")]([SubResource("Resource_e1pk3"), SubResource("Resource_8jshv")])
 test_game_path = "res://games/my_game/main.tscn"
 test_game_info = ExtResource("3_xhnac")
 
@@ -154,9 +144,11 @@ anchor_bottom = 1.0
 offset_top = -293.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Fade/MarginContainer"]
 layout_mode = 2
+mouse_filter = 2
 bbcode_enabled = true
 text = "[right][font_size=120]Loading [wave amp=150 freq=10]...[/wave][/font_size][/right]"
 fit_content = true
