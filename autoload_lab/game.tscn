@@ -144,9 +144,11 @@ anchor_bottom = 1.0
 offset_top = -293.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Fade/MarginContainer"]
 layout_mode = 2
+mouse_filter = 2
 bbcode_enabled = true
 text = "[right][font_size=120]Loading [wave amp=150 freq=10]...[/wave][/font_size][/right]"
 fit_content = true

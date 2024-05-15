@@ -9,3 +9,9 @@ name = "My Game"
 description = "This is the [shake level=20]description[/shake] of my game"
 image = ExtResource("1_s5148")
 inputs = Array[Resource("res://common/scripts/game_input.gd")]([])
+author = "My Name"
+credits = "Sprites:
+....itch.io/...
+Music:
+My Name
+"
