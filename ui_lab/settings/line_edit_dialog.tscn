@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnurualr3c7x2"]
+
+[ext_resource type="Theme" uid="uid://d2ykf56cwo70c" path="res://resources/dialogue.tres" id="1_vkomd"]
+[ext_resource type="Script" path="res://ui_lab/settings/line_edit_dialog.gd" id="2_ajjr8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5bmyf"]
+
+[node name="LineEditDialog" type="ConfirmationDialog"]
+transparent_bg = true
+canvas_item_default_texture_filter = 0
+initial_position = 2
+size = Vector2i(500, 302)
+visible = true
+borderless = true
+theme = ExtResource("1_vkomd")
+ok_button_text = "Confirm"
+script = ExtResource("2_ajjr8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 48.0
+offset_top = 48.0
+offset_right = 470.0
+offset_bottom = 200.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Property"
+horizontal_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+theme_override_styles/separator = SubResource("StyleBoxEmpty_5bmyf")

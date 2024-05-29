@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://behol51itxnuq"]
+
+[ext_resource type="Theme" uid="uid://d2ykf56cwo70c" path="res://resources/dialogue.tres" id="1_rrpqu"]
+[ext_resource type="Script" path="res://ui_lab/settings/image_dialog.gd" id="2_5oflx"]
+
+[node name="ImageDialog" type="FileDialog"]
+canvas_item_default_texture_filter = 0
+title = "Open a File"
+initial_position = 2
+size = Vector2i(1499, 781)
+visible = true
+theme = ExtResource("1_rrpqu")
+ok_button_text = "Open"
+file_mode = 0
+filters = PackedStringArray("*.png, *.jpg, *.jpeg, *.svg ; Images")
+script = ExtResource("2_5oflx")

@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bdw1l3krnkjt2"]
+[gd_scene load_steps=7 format=3 uid="uid://bdw1l3krnkjt2"]
 
 [ext_resource type="Script" path="res://ui_lab/main_menu.gd" id="1_03p47"]
 [ext_resource type="Shader" path="res://common/shaders/animated_diamond_pattern.gdshader" id="2_lydir"]
 [ext_resource type="StyleBox" uid="uid://cpkgprg55uey5" path="res://ui_lab/panel.tres" id="3_d1o3h"]
 [ext_resource type="FontFile" uid="uid://d2prf68aedwvv" path="res://common/assets/fonts/Abaddon_Fonts_v1.2/Abaddon Bold.ttf" id="4_ob21m"]
+[ext_resource type="PackedScene" uid="uid://d4ldts0rw5g7h" path="res://ui_lab/settings/settings.tscn" id="5_c23en"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qx0wo"]
 shader = ExtResource("2_lydir")
@@ -85,3 +86,6 @@ text = "SETTINGS"
 unique_name_in_owner = true
 layout_mode = 2
 text = "QUIT"
+
+[node name="SettingsScreen" parent="." instance=ExtResource("5_c23en")]
+layout_mode = 1

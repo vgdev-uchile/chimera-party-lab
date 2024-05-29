@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://drbx3vdxfi60k"]
+
+[ext_resource type="Theme" uid="uid://d2ykf56cwo70c" path="res://resources/dialogue.tres" id="1_gfhdi"]
+[ext_resource type="Script" path="res://ui_lab/settings/inputs_dialog.gd" id="2_xh7oc"]
+[ext_resource type="PackedScene" uid="uid://ymbpo6dhs14a" path="res://ui_lab/settings/input_info.tscn" id="3_v4lie"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5bmyf"]
+
+[node name="InputsDialog" type="ConfirmationDialog"]
+transparent_bg = true
+canvas_item_default_texture_filter = 0
+initial_position = 2
+size = Vector2i(900, 380)
+visible = true
+borderless = true
+theme = ExtResource("1_gfhdi")
+ok_button_text = "Confirm"
+script = ExtResource("2_xh7oc")
+input_info_scene = ExtResource("3_v4lie")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 48.0
+offset_top = 48.0
+offset_right = 870.0
+offset_bottom = 278.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Inputs"
+horizontal_alignment = 1
+
+[node name="InputInfosContainer" type="VBoxContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="InputInfo" parent="VBoxContainer/InputInfosContainer" instance=ExtResource("3_v4lie")]
+layout_mode = 2
+
+[node name="AddInput" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Add Input"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+theme_override_styles/separator = SubResource("StyleBoxEmpty_5bmyf")

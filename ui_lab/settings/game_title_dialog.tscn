@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://5mc247lpclqc"]
+
+[ext_resource type="PackedScene" uid="uid://bnurualr3c7x2" path="res://ui_lab/settings/line_edit_dialog.tscn" id="1_fbc4y"]
+[ext_resource type="Script" path="res://ui_lab/settings/game_title_dialog.gd" id="2_ya6qw"]
+
+[node name="GameTitleDialog" instance=ExtResource("1_fbc4y")]
+script = ExtResource("2_ya6qw")
+
+[node name="Label" parent="VBoxContainer" index="0"]
+text = "Game Title"

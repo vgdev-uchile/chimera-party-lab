@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bb87xp0hmos2o"]
+
+[ext_resource type="PackedScene" uid="uid://u68wga2b7b4l" path="res://ui_lab/settings/text_edit_dialog.tscn" id="1_7uvwv"]
+[ext_resource type="Script" path="res://ui_lab/settings/credits_dialog.gd" id="2_3kfd2"]
+
+[node name="CreditsDialog" instance=ExtResource("1_7uvwv")]
+script = ExtResource("2_3kfd2")
+
+[node name="Label" parent="VBoxContainer" index="0"]
+text = "Credits"

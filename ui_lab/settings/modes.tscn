@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3 uid="uid://notthqobq3ca"]
+
+[ext_resource type="Script" path="res://ui_lab/settings/modes.gd" id="1_ceexp"]
+
+[node name="Modes" type="VBoxContainer"]
+offset_right = 297.0
+offset_bottom = 178.0
+theme_override_constants/separation = 0
+script = ExtResource("1_ceexp")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "Game Modes"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+
+[node name="1v1" type="CheckBox" parent="GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1v1"
+
+[node name="1v2" type="CheckBox" parent="GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1v2"
+
+[node name="1v3" type="CheckBox" parent="GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1v3"
+
+[node name="2v2" type="CheckBox" parent="GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "2v2"
+
+[node name="FFA" type="CheckBox" parent="GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+text = "FFA"
