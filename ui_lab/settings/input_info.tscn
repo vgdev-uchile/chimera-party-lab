@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ymbpo6dhs14a"]
+
+[ext_resource type="Script" path="res://ui_lab/settings/input_info.gd" id="1_6x527"]
+[ext_resource type="PackedScene" uid="uid://cg5gw7tvklx2r" path="res://ui_lab/settings/inputs_toggle.tscn" id="1_ih5j7"]
+[ext_resource type="Texture2D" uid="uid://dy7lrw7ngjhjc" path="res://assets/sprites/bx-trash.svg" id="3_yx26c"]
+
+[node name="InputInfo" type="HBoxContainer"]
+script = ExtResource("1_6x527")
+
+[node name="InputsToggle" parent="." instance=ExtResource("1_ih5j7")]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="Delete" type="Button" parent="."]
+layout_mode = 2
+icon = ExtResource("3_yx26c")

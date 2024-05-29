@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d4ldts0rw5g7h"]
+[gd_scene load_steps=16 format=3 uid="uid://d4ldts0rw5g7h"]
 
 [ext_resource type="Texture2D" uid="uid://chott21qimfuk" path="res://assets/sprites/ui_boder.png" id="1_6u1q4"]
 [ext_resource type="Script" path="res://ui_lab/settings/settings.gd" id="1_yr5um"]
@@ -7,8 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://diidk6hambh4b" path="res://assets/sprites/bx-left-arrow-alt-big.svg" id="4_y2x0e"]
 [ext_resource type="Texture2D" uid="uid://bgkdmn75ncska" path="res://assets/sprites/bxs-edit.svg" id="6_j0h6g"]
 [ext_resource type="Texture2D" uid="uid://dn5xbyi150ft3" path="res://assets/sprites/bxs-image.svg" id="7_okcog"]
-[ext_resource type="Theme" uid="uid://d2ykf56cwo70c" path="res://resources/dialogue.tres" id="8_kwx37"]
-[ext_resource type="PackedScene" uid="uid://duovfb8jbktox" path="res://ui_lab/settings/description_dialog.tscn" id="9_1opa8"]
+[ext_resource type="PackedScene" uid="uid://5mc247lpclqc" path="res://ui_lab/settings/game_title_dialog.tscn" id="8_xpthg"]
+[ext_resource type="PackedScene" uid="uid://cyyi8q3a0qsui" path="res://ui_lab/settings/description_dialog.tscn" id="9_1opa8"]
+[ext_resource type="PackedScene" uid="uid://bey3o3ykyrr01" path="res://ui_lab/settings/author_dialog.tscn" id="10_hb4ra"]
+[ext_resource type="PackedScene" uid="uid://bb87xp0hmos2o" path="res://ui_lab/settings/credits_dialog.tscn" id="11_iosw3"]
+[ext_resource type="PackedScene" uid="uid://notthqobq3ca" path="res://ui_lab/settings/modes.tscn" id="11_lyf8w"]
+[ext_resource type="PackedScene" uid="uid://behol51itxnuq" path="res://ui_lab/settings/image_dialog.tscn" id="11_nvpci"]
+[ext_resource type="PackedScene" uid="uid://drbx3vdxfi60k" path="res://ui_lab/settings/inputs_dialog.tscn" id="13_p4nuf"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6smb4"]
 content_margin_left = 36.0
@@ -18,8 +23,6 @@ texture_margin_left = 48.0
 texture_margin_top = 48.0
 texture_margin_right = 30.0
 texture_margin_bottom = 30.0
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5bmyf"]
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -83,6 +86,21 @@ grow_horizontal = 0
 grow_vertical = 2
 icon = ExtResource("6_j0h6g")
 
+[node name="AuthorButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.883
+anchor_top = 0.886
+anchor_right = 0.883
+anchor_bottom = 0.886
+offset_left = -22.36
+offset_top = -21.8801
+offset_right = 21.64
+offset_bottom = 22.1199
+grow_horizontal = 0
+grow_vertical = 2
+icon = ExtResource("6_j0h6g")
+
 [node name="DescriptionButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -115,60 +133,71 @@ icon = ExtResource("7_okcog")
 [node name="InputsButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.834
-anchor_top = 0.781
-anchor_right = 0.834
-anchor_bottom = 0.781
-offset_left = -21.2802
-offset_top = -22.48
-offset_right = 22.7198
-offset_bottom = 21.52
+anchor_left = 0.833
+anchor_top = 0.799
+anchor_right = 0.833
+anchor_bottom = 0.799
+offset_left = -22.3601
+offset_top = -21.92
+offset_right = 21.6399
+offset_bottom = 22.08
 grow_horizontal = 0
 grow_vertical = 2
 icon = ExtResource("6_j0h6g")
 
-[node name="PlayersButton" type="Button" parent="."]
+[node name="CreditsButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.454
-anchor_top = 0.802
-anchor_right = 0.454
-anchor_bottom = 0.802
-offset_left = -21.6801
-offset_top = -22.16
-offset_right = 22.3199
-offset_bottom = 21.84
+anchor_left = 0.915
+anchor_top = 0.884
+anchor_right = 0.915
+anchor_bottom = 0.884
+offset_left = -22.8
+offset_top = -21.7201
+offset_right = 21.2
+offset_bottom = 22.2799
 grow_horizontal = 0
 grow_vertical = 2
 icon = ExtResource("6_j0h6g")
 
-[node name="GameTitleDialog" type="ConfirmationDialog" parent="."]
-transparent_bg = true
-initial_position = 2
-size = Vector2i(500, 290)
-borderless = true
-theme = ExtResource("8_kwx37")
-ok_button_text = "Confirm"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="GameTitleDialog"]
-offset_left = 36.0
-offset_top = 36.0
-offset_right = 470.0
-offset_bottom = 188.0
-
-[node name="Label" type="Label" parent="GameTitleDialog/VBoxContainer"]
-layout_mode = 2
-text = "Game Title"
-horizontal_alignment = 1
-
-[node name="LineEdit" type="LineEdit" parent="GameTitleDialog/VBoxContainer"]
-layout_mode = 2
-text = "Game Title"
-
-[node name="HSeparator" type="HSeparator" parent="GameTitleDialog/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 12
-theme_override_styles/separator = SubResource("StyleBoxEmpty_5bmyf")
-
 [node name="DescriptionDialog" parent="." instance=ExtResource("9_1opa8")]
+canvas_item_default_texture_filter = 1
 visible = false
+
+[node name="GameTitleDialog" parent="." instance=ExtResource("8_xpthg")]
+canvas_item_default_texture_filter = 1
+visible = false
+
+[node name="AuthorDialog" parent="." instance=ExtResource("10_hb4ra")]
+canvas_item_default_texture_filter = 1
+visible = false
+
+[node name="CreditsDialog" parent="." instance=ExtResource("11_iosw3")]
+canvas_item_default_texture_filter = 1
+visible = false
+
+[node name="ImageDialog" parent="." instance=ExtResource("11_nvpci")]
+visible = false
+
+[node name="InputsDialog" parent="." instance=ExtResource("13_p4nuf")]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 573.0
+offset_top = 782.0
+offset_right = 746.35
+offset_bottom = 822.0
+color = Color(0.301961, 0.65098, 0.721569, 1)
+
+[node name="Modes" parent="." instance=ExtResource("11_lyf8w")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35
+anchor_top = 0.894
+anchor_right = 0.35
+anchor_bottom = 0.894
+offset_left = -193.0
+offset_top = -190.52
+offset_right = 193.0
+offset_bottom = -0.52002

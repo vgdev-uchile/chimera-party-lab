@@ -1,0 +1,149 @@
+[gd_scene load_steps=22 format=3 uid="uid://cg5gw7tvklx2r"]
+
+[ext_resource type="Script" path="res://ui_lab/settings/inputs_toggle.gd" id="1_1hbdh"]
+[ext_resource type="Texture2D" uid="uid://dwgvtp1yw65qf" path="res://common/assets/sprites/input_no_outline.png" id="1_y572m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xt3q1"]
+atlas = ExtResource("1_y572m")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_io1mc"]
+texture = SubResource("AtlasTexture_xt3q1")
+modulate_color = Color(1, 1, 1, 0.498039)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sjsgs"]
+texture = SubResource("AtlasTexture_xt3q1")
+modulate_color = Color(0.497474, 0.497474, 0.497474, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_riuql"]
+texture = SubResource("AtlasTexture_xt3q1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2nlpb"]
+texture = SubResource("AtlasTexture_xt3q1")
+modulate_color = Color(1, 1, 1, 0.498039)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p11jb"]
+atlas = ExtResource("1_y572m")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5qm18"]
+texture = SubResource("AtlasTexture_p11jb")
+modulate_color = Color(1, 1, 1, 0.498039)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n28n3"]
+texture = SubResource("AtlasTexture_p11jb")
+modulate_color = Color(0.497474, 0.497474, 0.497474, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4xqaq"]
+texture = SubResource("AtlasTexture_p11jb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tebdd"]
+texture = SubResource("AtlasTexture_p11jb")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mfkv2"]
+load_path = "res://.godot/imported/input_no_outline.png-00c16af79bcfc63f248ef48e7a00fd82.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2e1f"]
+atlas = SubResource("CompressedTexture2D_mfkv2")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_13l1v"]
+texture = SubResource("AtlasTexture_j2e1f")
+modulate_color = Color(1, 1, 1, 0.498039)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_72l7g"]
+texture = SubResource("AtlasTexture_j2e1f")
+modulate_color = Color(0.497474, 0.497474, 0.497474, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mkydh"]
+texture = SubResource("AtlasTexture_j2e1f")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36xcc"]
+atlas = ExtResource("1_y572m")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tex7c"]
+texture = SubResource("AtlasTexture_36xcc")
+modulate_color = Color(1, 1, 1, 0.498039)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l1iyj"]
+texture = SubResource("AtlasTexture_36xcc")
+modulate_color = Color(0.497474, 0.497474, 0.497474, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lr2up"]
+texture = SubResource("AtlasTexture_36xcc")
+
+[node name="InputsToggle" type="Control"]
+custom_minimum_size = Vector2(384, 64)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 384.0
+offset_bottom = 64.0
+script = ExtResource("1_1hbdh")
+
+[node name="Left" type="Button" parent="."]
+layout_mode = 2
+offset_right = 64.0
+offset_bottom = 64.0
+scale = Vector2(-1, 1)
+pivot_offset = Vector2(32, 0)
+theme_override_styles/normal = SubResource("StyleBoxTexture_io1mc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_sjsgs")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_riuql")
+toggle_mode = true
+
+[node name="Right" type="Button" parent="."]
+layout_mode = 2
+offset_left = 64.0
+offset_right = 128.0
+offset_bottom = 64.0
+pivot_offset = Vector2(32, 0)
+theme_override_styles/normal = SubResource("StyleBoxTexture_2nlpb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_sjsgs")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_riuql")
+toggle_mode = true
+
+[node name="Up" type="Button" parent="."]
+layout_mode = 2
+offset_left = 128.0
+offset_right = 192.0
+offset_bottom = 64.0
+pivot_offset = Vector2(32, 32)
+theme_override_styles/normal = SubResource("StyleBoxTexture_5qm18")
+theme_override_styles/hover = SubResource("StyleBoxTexture_n28n3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4xqaq")
+toggle_mode = true
+
+[node name="Down" type="Button" parent="."]
+layout_mode = 2
+offset_left = 192.0
+offset_right = 256.0
+offset_bottom = 64.0
+scale = Vector2(1, -1)
+pivot_offset = Vector2(32, 32)
+theme_override_styles/normal = SubResource("StyleBoxTexture_5qm18")
+theme_override_styles/hover = SubResource("StyleBoxTexture_n28n3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tebdd")
+toggle_mode = true
+
+[node name="A" type="Button" parent="."]
+layout_mode = 2
+offset_left = 256.0
+offset_right = 320.0
+offset_bottom = 64.0
+pivot_offset = Vector2(32, 32)
+theme_override_styles/normal = SubResource("StyleBoxTexture_13l1v")
+theme_override_styles/hover = SubResource("StyleBoxTexture_72l7g")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mkydh")
+toggle_mode = true
+
+[node name="B" type="Button" parent="."]
+layout_mode = 2
+offset_left = 320.0
+offset_right = 384.0
+offset_bottom = 64.0
+pivot_offset = Vector2(32, 32)
+theme_override_styles/normal = SubResource("StyleBoxTexture_tex7c")
+theme_override_styles/hover = SubResource("StyleBoxTexture_l1iyj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lr2up")
+toggle_mode = true

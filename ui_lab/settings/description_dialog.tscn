@@ -1,49 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://duovfb8jbktox"]
+[gd_scene load_steps=3 format=3 uid="uid://cyyi8q3a0qsui"]
 
-[ext_resource type="Theme" uid="uid://d2ykf56cwo70c" path="res://resources/dialogue.tres" id="1_sj5hx"]
+[ext_resource type="PackedScene" uid="uid://u68wga2b7b4l" path="res://ui_lab/settings/text_edit_dialog.tscn" id="1_x5tal"]
 [ext_resource type="Script" path="res://ui_lab/settings/description_dialog.gd" id="2_v77e3"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5bmyf"]
-
-[node name="DescriptionDialog" type="ConfirmationDialog"]
-transparent_bg = true
-initial_position = 2
-size = Vector2i(1200, 600)
-visible = true
-borderless = true
-theme = ExtResource("1_sj5hx")
-ok_button_text = "Confirm"
+[node name="DescriptionDialog" instance=ExtResource("1_x5tal")]
 script = ExtResource("2_v77e3")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 48.0
-offset_top = 48.0
-offset_right = 1170.0
-offset_bottom = 498.0
-
-[node name="Label" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "Game Title"
-horizontal_alignment = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="TextEdit" type="TextEdit" parent="VBoxContainer/HBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
+[node name="Label" parent="VBoxContainer" index="0"]
 text = "Description"
-wrap_mode = 1
-
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-bbcode_enabled = true
-
-[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 12
-theme_override_styles/separator = SubResource("StyleBoxEmpty_5bmyf")
