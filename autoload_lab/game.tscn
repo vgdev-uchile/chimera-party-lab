@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://c72yce6p8dtt6"]
+[gd_scene load_steps=11 format=3 uid="uid://c72yce6p8dtt6"]
 
 [ext_resource type="Script" path="res://autoload_lab/game.gd" id="1_e4b7m"]
 [ext_resource type="Script" path="res://common/scripts/player_resource.gd" id="2_6hqau"]
+[ext_resource type="PackedScene" uid="uid://ckrrpdn8rkl17" path="res://games/my_game/main.tscn" id="3_eg6wp"]
 [ext_resource type="Resource" uid="uid://s8enhofex5ek" path="res://games/my_game/info.tres" id="3_xhnac"]
 
 [sub_resource type="Resource" id="Resource_e1pk3"]
@@ -114,7 +115,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_e4b7m")
 test_players = Array[ExtResource("2_6hqau")]([SubResource("Resource_e1pk3"), SubResource("Resource_8jshv")])
-test_game_path = "res://games/my_game/main.tscn"
+test_game_scene = ExtResource("3_eg6wp")
 test_game_info = ExtResource("3_xhnac")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

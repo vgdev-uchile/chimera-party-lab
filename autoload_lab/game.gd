@@ -2,7 +2,7 @@ extends Control
 
 
 @export var test_players: Array[PlayerResource] = []
-@export var test_game_path: String # something like res://games/my_game/main.tscn
+@export var test_game_scene: PackedScene
 @export var test_game_info: GameInfo
 
 var players: Array[PlayerData] = []
@@ -57,7 +57,10 @@ func get_current_game_info() -> GameInfo:
 
 
 func load_current_game():
-	load_game(test_game_path)
+	if not test_game_scene:
+		Debug.log("No test scene selected")
+		return
+	load_game(test_game_scene.resource_path)
 
 
 func get_current_game_path() -> String:
